@@ -1,0 +1,12 @@
+#BlueJ class context
+comment0.target=Draw
+comment0.text=\r\n\ Draw\ 6\ numbers\ in\ an\ array\ for\ a\ lotto\ game\r\n\r\n\ @author\ Keira\ Malan\r\n\ @version\ 11/3/21\r\n
+comment1.params=
+comment1.target=Draw()
+comment2.params=num_amount
+comment2.target=int[]\ createArray(int)
+comment2.text=\r\n\ constructor\ for\ objects\ of\ class\ Draw\r\n
+comment3.params=checkFor\ lottoDraw
+comment3.target=boolean\ checkForNum(int,\ int[])
+comment3.text=\r\n\ Method\ to\ check\ if\ number\ is\ in\ array\r\n
+numComments=4

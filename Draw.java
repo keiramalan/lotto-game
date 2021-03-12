@@ -6,40 +6,67 @@
  * @version 11/3/21
  */
 public class Draw
+
 {
     // constants - num of numbers, limit of lotto num (40 or sumn)
     final int LOTTO_LIMIT = 40;
-    final int NUM_AMOUNT = 6;
+    // make an input later, this is how many numbers user wants
+    int num_amount = 6;
+    int potentialNum = 0;
+    
+    public Draw() {
+        int [] newArray = createArray(num_amount);
+        for (int element : newArray) {
+            System.out.println(element);
+        }
+    }
     
     /*
      * constructor for objects of class Draw
      */
-    public Draw() {
+    public int[] createArray(int num_amount) {
         // create array
-        int[] lottoDraw = new int[NUM_AMOUNT];
+        int[] lottoDraw = new int[num_amount];
         // randomly assign number up to 40 in each section of array w for loop
-        for (int index = 0; index < NUM_AMOUNT; index ++) {
-            lottoDraw[index] = (int) ((Math.random() + 1) * LOTTO_LIMIT);
-            // new number
-            lottoDraw[index] = (int) ((Math.random() + 1) * LOTTO_LIMIT);
-            // if new number not in array aready add to array
-            // else loop for new number
-            // make it a while loop????
-        }
+        for (int index = 0; index < num_amount; index ++) {
+            // while loop
+            // create number
+            potentialNum = (int) (Math.random() * (LOTTO_LIMIT + 1));
+            // check number isnt in array using method
+            boolean repeat = checkForNum(potentialNum, lottoDraw);
             
-        // loop through to check for repeats
-        // nested loop
-        //for (int checkFor: lottoDraw){
-            //for (int num: lottoDraw) {
-                //if (
-                // check if x number is in for loop
+            // if method resturns true, loop until unique number is found
+            while (repeat) {
+                potentialNum = (int) (Math.random() * (LOTTO_LIMIT + 1));
+                repeat = checkForNum(potentialNum, lottoDraw);
+            }
+            
+            // add to array
+            lottoDraw[index] = potentialNum;
+        }
+        return lottoDraw;
     }
     
     /*
-     * Return final array
+     * Method to check if number is in array
      */
-    public int[] returnList() {
-        // return array
+    public boolean checkForNum(int checkFor, int[] lottoDraw) {
+        
+        boolean repeat = false;
+        // for loop that goes thru length of array
+        for (int counter = 0; counter < lottoDraw.length; counter++) {
+            // if potential num is in array, break loop and return True
+            if (checkFor == lottoDraw[counter]) {
+                repeat = true;
+                // break loop
+                break;
+            }
+            
+        }
+        
+        return repeat;
     }
+    
+
 }
 
