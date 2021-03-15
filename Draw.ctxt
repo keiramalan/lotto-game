@@ -1,6 +1,6 @@
 #BlueJ class context
 comment0.target=Draw
-comment0.text=\r\n\ Draw\ 6\ numbers\ in\ an\ array\ for\ a\ lotto\ game\r\n\r\n\ @author\ Keira\ Malan\r\n\ @version\ 11/3/21\r\n
+comment0.text=\r\n\ Draw\ x\ amount\ of\ numbers\ in\ an\ array\ for\ a\ lotto\ game\r\n\r\n\ @author\ Keira\ Malan\r\n\ @version\ 11/3/21\r\n
 comment1.params=
 comment1.target=Draw()
 comment2.params=num_amount

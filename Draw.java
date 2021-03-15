@@ -1,6 +1,6 @@
 
 /**
- * Draw 6 numbers in an array for a lotto game
+ * Draw x amount of numbers in an array for a lotto game
  *
  * @author Keira Malan
  * @version 11/3/21
@@ -15,10 +15,7 @@ public class Draw
     int potentialNum = 0;
     
     public Draw() {
-        int [] newArray = createArray(num_amount);
-        for (int element : newArray) {
-            System.out.println(element);
-        }
+        
     }
     
     /*

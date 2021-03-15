@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Strike
+comment0.text=\r\n\ Draw\ 4\ numbers,\ prize\ is\ given\ if\ they\ match\r\n\r\n\ @author\ Keira\ Malan\r\n\ @version\ 16/03/21\r\n
+comment1.params=
+comment1.target=Strike()
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Strike\r\n
+numComments=2
